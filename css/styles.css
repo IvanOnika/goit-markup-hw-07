@@ -791,6 +791,11 @@ address {
 
 .button-modal:hover {
   cursor: pointer;
+  fill: #188ce8;
+}
+
+.button-modal:focus{
+  fill: #188ce8;
 }
 
 .modal-item {
