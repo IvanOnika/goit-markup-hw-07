@@ -29,6 +29,14 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+
 .container {
   max-width: 1200px;
   padding: 0 15px;
@@ -57,6 +65,8 @@ html {
 ul {
   list-style: none;
   margin: 0px;
+  display: inline-block;
+  padding-inline-start: 0px;
 }
 
 a {
@@ -298,7 +308,7 @@ header {
   height: 80px;
 }
 
-.container-header {
+.container__header {
   display: flex;
   align-items: baseline;
   margin: auto;
@@ -306,59 +316,33 @@ header {
 }
 
 .logo {
+  display: inline-block;
   font-family: Raleway, cursive;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.19;
+  color: var(--accent-color);
+}
+.logo__header {
   color: #000;
 }
 
-.logo-color {
-  color: var(--accent-color);
-}
-
-.list-nav {
+.navigation {
   margin-left: 93px;
-}
-
-.list-item {
-  margin-right: 50px;
-  letter-spacing: 0.02em;
-}
-
-.list-item:last-child {
-  margin-right: 0px;
-}
-
-.contacts {
-  display: flex;
-  letter-spacing: 0.02em;
-}
-
-.contact-item:first-child {
-  margin-right: 30px;
-}
-
-/* навігація в хедері*/
-a .logo {
-  display: inline-block;
-}
-
-ul {
-  display: inline-block;
-  padding-inline-start: 0px;
-}
-
-.site-nav {
   display: flex;
   flex-shrink: 0;
 }
 
-.site-nav li {
+.menu__item {
+  margin-right: 50px;
+  letter-spacing: 0.02em;
   display: inline-block;
 }
+.menu__item:last-child {
+  margin-right: 0px;
+}
 
-.site-nav a {
+.menu__link {
   color: var(--title-text-color);
   transition-property: color;
   transition-duration: 250ms;
@@ -368,20 +352,16 @@ ul {
   line-height: 1.14;
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
+.menu__link:hover,
+.menu__link:focus {
   color: var(--accent-color);
 }
 
-li .page {
-  color: var(--accent-color);
-}
-
-.page {
+.current {
   position: relative;
+  color: var(--accent-color);
 }
-
-.page::after {
+.current::after {
   position: absolute;
   left: 0;
   bottom: -28px;
@@ -395,19 +375,23 @@ li .page {
 
 /*Контакти в хедері*/
 .contacts {
+  display: flex;
+  letter-spacing: 0.02em;
   margin-left: 318px;
   flex-shrink: 0;
 }
-
-.contact-item {
-  margin-right: 0px;
-}
-
 .contacts:first-child {
   margin-right: 50px;
 }
 
-.contacts a {
+.contact__item {
+  margin-right: 0px;
+}
+.contact__item:first-child {
+  margin-right: 30px;
+}
+
+.contact__icon {
   color: var(--primary-text-color);
   transition-property: color;
   transition-duration: 250ms;
@@ -419,18 +403,15 @@ li .page {
   justify-content: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.contacts a:hover,
-.contacts a:focus {
+.contact__icon:hover, .contact__icon:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  color: var(--primary-text-color);
+.contact__icon:hover .email, .contact__icon:focus .email {
+  fill: var(--accent-color);
+}
+.contact__icon:hover .phone, .contact__icon:focus .phone {
+  fill: var(--accent-color);
 }
 
 .email {
@@ -440,6 +421,9 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.email:hover, .email:focus {
+  fill: var(--accent-color);
+}
 
 .phone {
   margin-right: 10px;
@@ -448,33 +432,11 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.contact-icon:hover,
-.contact-icon:focus {
+.phone:hover, .phone:focus {
   fill: var(--accent-color);
 }
 
-.email:hover,
-.email:focus {
-  fill: var(--accent-color);
-}
-
-.phone:hover,
-.phone:focus {
-  fill: var(--accent-color);
-}
-
-.contact-icon:hover .email,
-.contact-icon:focus .email {
-  fill: var(--accent-color);
-}
-
-.contact-icon:hover .phone,
-.contact-icon:focus .phone {
-  fill: var(--accent-color);
-}
-
-.header-border {
+.header__border {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -763,13 +725,8 @@ button {
   fill: var(--accent-color);
 }
 
-.logo-footer {
-  font-family: Raleway, sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.19;
-  color: var(--primary-white-color);
-  display: block;
+.logo__footer {
+  color: #fff;
 }
 
 address {
