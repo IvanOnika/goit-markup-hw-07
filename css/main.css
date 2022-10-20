@@ -525,15 +525,24 @@ header {
   padding-top: 0px;
 }
 
-.list-item-benefits {
+.section__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.list__item--benefits {
   display: flex;
 }
 
-.list-examples {
+.list__examples {
   margin-right: 30px;
 }
-
-.list-examples:last-child {
+.list__examples:last-child {
   margin-right: 0px;
 }
 
@@ -567,27 +576,16 @@ header {
   color: #ffffff;
 }
 
-.section-title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
+.content--bcgnd {
+  background-color: #f5f4fa;
 }
 
-.team-list {
+.team__list {
   display: flex;
   justify-content: space-between;
 }
 
-.about-text {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.team-card {
+.team__card {
   padding-bottom: 30px;
   width: 270px;
   height: 428px;
@@ -596,12 +594,16 @@ header {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
-.team-card:last-child {
+.team__card:last-child {
   padding-right: 0px;
 }
 
-.team-names {
+.about-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__names {
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -610,7 +612,7 @@ header {
   color: var(--title-text-color);
 }
 
-.job-title {
+.job__title {
   text-align: center;
   font-size: 16px;
   line-height: 1.18;
@@ -618,13 +620,12 @@ header {
   margin-bottom: 16px;
 }
 
-.social-links {
+.social__links {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-
-.social-links-icon {
+.social__links--item {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -634,24 +635,7 @@ header {
   border-radius: 50%;
 }
 
-.link-to-social:hover,
-.link-to-social:focus {
-  background-color: #2196f3;
-}
-
-.link-to-social:hover .icon-social,
-.link-to-social:focus .icon-social {
-  fill: white;
-}
-
-.icon-social {
-  fill: #afb1b8;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-to-social {
+.social__link {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -664,13 +648,22 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.social__link:hover, .social__link:focus {
+  background-color: #2196f3;
+}
+.social__link:hover .social__icon, .social__link:focus .social__icon {
+  fill: #fff;
+}
+
+.social__icon {
+  fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .photo {
   display: block;
-}
-
-.content-bcgnd {
-  background-color: #f5f4fa;
 }
 
 .clients-list {
