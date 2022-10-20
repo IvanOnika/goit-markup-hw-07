@@ -351,9 +351,7 @@ header {
   font-size: 14px;
   line-height: 1.14;
 }
-
-.menu__link:hover,
-.menu__link:focus {
+.menu__link:hover, .menu__link:focus {
   color: var(--accent-color);
 }
 
@@ -373,7 +371,6 @@ header {
   z-index: 1;
 }
 
-/*Контакти в хедері*/
 .contacts {
   display: flex;
   letter-spacing: 0.02em;
