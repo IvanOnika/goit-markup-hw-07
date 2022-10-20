@@ -666,23 +666,23 @@ header {
   display: block;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   gap: 30px;
 }
 
-.clients-list-icon {
+.client__list--item {
   display: flex;
 }
 
-.client-icon {
+.client__icon {
   fill: #afb1b8;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-to-client {
+.client__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -694,14 +694,10 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.link-to-client:hover,
-.link-to-client:focus {
+.client__link:hover, .client__link:focus {
   border: 1px solid var(--accent-color);
 }
-
-.link-to-client:hover .client-icon,
-.link-to-client:focus .client-icon {
+.client__link:hover .client__icon, .client__link:focus .client__icon {
   fill: var(--accent-color);
 }
 
