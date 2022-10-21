@@ -433,7 +433,7 @@ header {
   fill: var(--accent-color);
 }
 
-.header__border {
+.header-border {
   position: absolute;
   left: 0;
   bottom: 0;
