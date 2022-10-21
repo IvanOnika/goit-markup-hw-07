@@ -308,7 +308,7 @@ header {
   height: 80px;
 }
 
-.container__header {
+.container-header {
   display: flex;
   align-items: baseline;
   margin: auto;
@@ -323,7 +323,7 @@ header {
   line-height: 1.19;
   color: var(--accent-color);
 }
-.logo__header {
+.logo--light {
   color: #000;
 }
 
@@ -333,16 +333,16 @@ header {
   flex-shrink: 0;
 }
 
-.menu__item {
+.nav__item {
   margin-right: 50px;
   letter-spacing: 0.02em;
   display: inline-block;
 }
-.menu__item:last-child {
+.nav__item:last-child {
   margin-right: 0px;
 }
 
-.menu__link {
+.nav__link {
   color: var(--title-text-color);
   transition-property: color;
   transition-duration: 250ms;
@@ -351,7 +351,7 @@ header {
   font-size: 14px;
   line-height: 1.14;
 }
-.menu__link:hover, .menu__link:focus {
+.nav__link:hover, .nav__link:focus {
   color: var(--accent-color);
 }
 
