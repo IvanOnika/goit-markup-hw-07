@@ -327,7 +327,7 @@ header {
   color: #000;
 }
 
-.navigation {
+.nav {
   margin-left: 93px;
   display: flex;
   flex-shrink: 0;
@@ -404,32 +404,32 @@ header {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-.contact__icon:hover .email, .contact__icon:focus .email {
+.contact__icon:hover .contact__email, .contact__icon:focus .contact__email {
   fill: var(--accent-color);
 }
-.contact__icon:hover .phone, .contact__icon:focus .phone {
+.contact__icon:hover .contact__phone, .contact__icon:focus .contact__phone {
   fill: var(--accent-color);
 }
 
-.email {
+.contact__email {
   margin-right: 10px;
   fill: #757575;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.email:hover, .email:focus {
+.contact__email:hover, .contact__email:focus {
   fill: var(--accent-color);
 }
 
-.phone {
+.contact__phone {
   margin-right: 10px;
   fill: #757575;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.phone:hover, .phone:focus {
+.contact__phone:hover, .contact__phone:focus {
   fill: var(--accent-color);
 }
 

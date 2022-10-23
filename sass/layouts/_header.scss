@@ -25,7 +25,7 @@ header {
   }
 }
 
-.navigation {
+.nav {
   margin-left: 93px;
   display: flex;
   flex-shrink: 0;
@@ -110,18 +110,18 @@ header {
     fill: var(--accent-color);
   }
 
-  &:hover .email,
-  &:focus .email {
+  &:hover .contact__email,
+  &:focus .contact__email {
     fill: var(--accent-color);
   }
 
-  &:hover .phone,
-  &:focus .phone {
+  &:hover .contact__phone,
+  &:focus .contact__phone {
     fill: var(--accent-color);
   }
 }
 
-.email {
+.contact__email {
   margin-right: 10px;
   fill: #757575;
   transition-property: fill;
@@ -134,7 +134,7 @@ header {
   }
 }
 
-.phone {
+.contact__phone {
   margin-right: 10px;
   fill: #757575;
   transition-property: fill;
