@@ -355,11 +355,11 @@ header {
   color: var(--accent-color);
 }
 
-.current {
+.nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
-.current::after {
+.nav__link--current::after {
   position: absolute;
   left: 0;
   bottom: -28px;
@@ -625,7 +625,7 @@ header {
   gap: 10px;
   justify-content: center;
 }
-.social__links--item {
+.social__links-item {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -671,7 +671,7 @@ header {
   gap: 30px;
 }
 
-.client__list--item {
+.client__list-item {
   display: flex;
 }
 
@@ -858,22 +858,22 @@ address {
   fill: #fff;
 }
 
-.portfolio-btn {
+.portfolio__filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.btn-icon {
+.portfolio__item {
   padding-top: 0px;
   margin-right: 8px;
 }
 
-.btn-icon:last-child {
+.portfolio__item:last-child {
   margin-right: 0px;
 }
 
-.control-btn {
+.portfolio__btn {
   border: 0px;
   margin-top: 0px;
   padding: 6px 22px;
@@ -881,15 +881,16 @@ address {
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
 }
 
-.control-btn:hover {
+.portfolio__btn:hover {
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
-.portfolio-btn button {
+.portfolio__filter button {
   background-color: #f5f4fa;
   color: var(--title-text-color);
   font-family: "Roboto";
@@ -898,14 +899,14 @@ address {
   line-height: 1.62;
 }
 
-.portfolio-btn button:hover,
-.portfolio-btn button:focus {
+.portfolio__filter button:hover,
+.portfolio__filter button:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   border-color: var(--accent-color);
 }
 
-.portfolio-btn button {
+.portfolio__filter button {
   cursor: pointer;
 }
 
@@ -916,28 +917,47 @@ address {
   flex-wrap: wrap;
 }
 
-.product-img {
-  display: block;
+.products__card {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eeeeee;
 }
 
-.thumb {
-  position: relative;
-  overflow: hidden;
+.product__card:nth-child(3n) {
+  margin-right: 0px;
 }
 
-.product {
+.product__card:nth-last-child(-n+3) {
+  margin-bottom: 0px;
+}
+
+.products__link {
   display: block;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.product:hover,
-.product:focus {
+.products__link:hover,
+.products__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.overlay {
+.products__link:hover .products__overlay,
+.products__link:focus .products__overlay {
+  transform: translateY(0);
+}
+
+.products__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.product__img {
+  display: block;
+}
+
+.products__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -949,7 +969,7 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.description {
+.products__description {
   width: 100%;
   height: 100%;
   font-weight: 400;
@@ -961,46 +981,24 @@ address {
   padding: 63px 24px;
 }
 
-.product:hover .overlay,
-.product:focus .overlay {
-  transform: translateY(0);
+.products__about {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 
-.card-product {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.card-product:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.card-product:nth-last-child(-n+3) {
-  margin-bottom: 0px;
-}
-
-.products h2 {
+.products__name {
+  margin-bottom: 4px;
+  letter-spacing: 0.06em;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   color: var(--title-text-color);
 }
 
-.product-name {
-  margin-bottom: 4px;
-  letter-spacing: 0.06em;
-}
-
-.product-type {
+.products__type {
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
-}
-
-.about-products {
-  padding: 20px 24px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
 }/*# sourceMappingURL=main.css.map */
