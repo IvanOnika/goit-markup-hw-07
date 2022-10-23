@@ -109,11 +109,20 @@ address {
   display: flex;
   flex-direction: column;
   padding-top: 12px;
+
+  & input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .follow__input {
   height: 50px;
   width: 358px;
+  padding-left: 15px;
   margin-top: 20px;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
